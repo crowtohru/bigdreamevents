@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fff6e6" id="metaTheme">
+<title>Big Dream Events — Elevate Your Plans</title>
+<script>
+(function(){var t;try{t=localStorage.getItem("bde-theme")}catch(e){}
+if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+document.documentElement.dataset.theme=t})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="hero.css">
+<link rel="stylesheet" href="services.css">
+<link rel="stylesheet" href="packages.css">
+<link rel="stylesheet" href="gallery.css">
+<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="chat.css">
+<noscript><style>[data-r],.hero-c>*,.hero h1{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<div id="prog"></div>
+
+<header id="hdr"><div class="nav">
+  <a class="logo" href="#home" aria-label="Big Dream Events"><b>Big Dream Events</b><small>by: Aki and Ali</small></a>
+  <nav class="links" id="links">
+    <a href="#home">Home</a><a href="#services">Services</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    <div class="tools">
+      <a class="btn" href="#contact">Book Now</a>
+      <a class="ib" data-link="facebook" data-icon="fb" target="_blank" rel="noopener" aria-label="Visit our Facebook page"></a>
+      <a class="ib" data-link="instagram" data-icon="ig" target="_blank" rel="noopener" aria-label="Visit our Instagram"></a>
+      <button class="ib" id="theme" data-icon="theme" aria-label="Toggle light or dark mode"></button>
+    </div>
+  </nav>
+  <button class="burger" id="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+
+<main>
+<section class="hero on-dark" id="home">
+  <div class="slides" id="slides"></div>
+  <div class="spark" id="spark"></div>
+  <div class="hero-c">
+    <small style="--i:0">Big Dream Events · by Aki &amp; Ali</small>
+    <h1 class="gold-text">ELEVATE YOUR PLANS</h1>
+    <div class="sub" style="--i:2">AND TURN THEM INTO REALITY</div>
+    <div class="cta" style="--i:3">
+      <a class="btn" data-link="facebook" target="_blank" rel="noopener">Visit us on <i data-icon="fb"></i></a>
+      <a class="btn o" href="#contact">Reach out to us</a>
+    </div>
+    <div class="dots" id="dots" style="--i:4"></div>
+  </div>
+  <a class="cue" href="#services" aria-label="Scroll to services"></a>
+  <div class="hero-timer" aria-hidden="true"><i></i></div>
+</section>
+
+<section id="services">
+  <svg class="orn l" data-r="orn" viewBox="0 0 120 220" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path pathLength="1" d="M6 8c44 0 74 20 74 50s-32 40-42 20 15-32 30-15"/><path pathLength="1" d="M6 8C6 80 16 140 10 214"/><path pathLength="1" d="M30 40c22 4 36 20 32 38"/></svg>
+  <svg class="orn r" data-r="orn" viewBox="0 0 120 220" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path pathLength="1" d="M6 8c44 0 74 20 74 50s-32 40-42 20 15-32 30-15"/><path pathLength="1" d="M6 8C6 80 16 140 10 214"/><path pathLength="1" d="M30 40c22 4 36 20 32 38"/></svg>
+  <div class="wrap">
+    <div class="t" data-r="up"><h2>Choose from <em>our services</em></h2><p>Swipe through, then tap a card to see its package styles.</p></div>
+    <div class="chips" id="chips" data-r="up" style="--d:.1s"></div>
+    <div class="car" data-r="zoom" style="--d:.15s">
+      <button class="arr l" id="pl" aria-label="Previous">‹</button>
+      <div class="track" id="track"></div>
+      <button class="arr r" id="nx" aria-label="Next">›</button>
+    </div>
+    <p class="hint">← swipe or use the arrows →</p>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="wrap">
+    <div class="t" data-r="up"><h2>Package <em>Inclusions</em></h2><p>Pick a package to browse its inclusion sheets.</p></div>
+    <div class="pk-nav" id="pkNav"><div class="pk-tabs" id="pkTabs"></div></div>
+    <div class="pk">
+      <div class="pk-view" data-r="left">
+        <div class="pk-frame">
+          <div class="pk-stage" id="pkStage" tabindex="0" aria-label="Inclusion images — use arrow keys or drag"></div>
+          <button class="arr l" id="pkPrev" aria-label="Previous image">‹</button>
+          <button class="arr r" id="pkNext" aria-label="Next image">›</button>
+          <div class="pk-count" id="pkCount"></div>
+        </div>
+        <div class="pk-thumbs" id="pkThumbs"></div>
+      </div>
+      <div class="pk-info" id="pkInfo" data-r="right">
+        <h3 id="pkName"></h3>
+        <div class="pk-price">Starting at<b id="pkFrom"></b></div>
+        <p id="pkDesc"></p>
+        <ul id="pkList"></ul>
+        <div class="pk-act">
+          <button class="btn" id="pkBook">Book this package</button>
+          <a class="btn o" data-link="facebook" target="_blank" rel="noopener">See more <i data-icon="fb"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="t" data-r="up"><h2>Our <em>Gallery</em></h2><p>Moments we've brought to life.</p></div>
+  <div class="mq" data-r="up" style="--d:.1s"><div class="mt" id="m1"></div></div>
+  <div class="mq w" data-r="up" style="--d:.2s"><div class="mt" id="m2"></div></div>
+  <div class="gal-cta"><a class="btn o" data-link="facebook" target="_blank" rel="noopener">More on Facebook <i data-icon="fb"></i></a></div>
+</section>
+
+<section id="contact" class="on-dark">
+  <div class="wrap">
+    <div class="t" data-r="up"><h2>Contact <em>Us</em></h2><p>Chat with us or send an email — we'll get back to you quickly.</p></div>
+    <p class="pick" id="pick" hidden></p>
+    <div class="ct">
+      <a class="ch" data-link="messenger" target="_blank" rel="noopener" data-r="up"><i data-icon="msg"></i><div><b>Chat with us</b><span>Messenger</span></div></a>
+      <a class="ch" data-link="email" data-r="up" style="--d:.08s"><i data-icon="mail"></i><div><b>Send an email</b><span>bigdreamevents25@gmail.com</span></div></a>
+      <a class="ch" data-link="instagram" target="_blank" rel="noopener" data-r="up" style="--d:.16s"><i data-icon="ig"></i><div><b>Follow us on Instagram</b><span>@bigdreameventby.aki_ali</span></div></a>
+      <a class="ch" data-link="facebook" target="_blank" rel="noopener" data-r="up" style="--d:.24s"><i data-icon="fb"></i><div><b>Visit us on Facebook</b><span>Big Dream Events</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <a class="logo" href="#home"><b>Big Dream Events</b><small>by: Aki and Ali</small></a>
+  <nav><a href="#services">Services</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+  <a class="ib" data-link="facebook" data-icon="fb" target="_blank" rel="noopener" aria-label="Facebook"></a>
+  <a class="ib" data-link="instagram" data-icon="ig" target="_blank" rel="noopener" aria-label="Instagram"></a>
+  <small>© <span id="y"></span> Big Dream Events. Prices are starting rates.</small>
+</footer>
+
+<dialog id="dlg"><button class="x" id="dx" aria-label="Close">✕</button><div class="dg"><div id="dimg"></div><div class="bd">
+  <h3 id="dt2"></h3><div class="p" id="dp"></div>
+  <label>Package styles</label><div class="sty" id="dsty"></div>
+  <label>Inclusions</label><ul id="dul"></ul>
+  <button class="btn" id="dbook">Book this style</button>
+</div></div></dialog>
+
+<div class="fab"><button id="top" aria-label="Back to top">↑</button></div>
+
+<script src="data.js"></script>
+<script src="utils.js"></script>
+<script src="theme.js"></script>
+<script src="ui.js"></script>
+<script src="hero.js"></script>
+<script src="carousel.js"></script>
+<script src="modal.js"></script>
+<script src="packages.js"></script>
+<script src="gallery.js"></script>
+<script src="contact.js"></script>
+<script src="chat.js"></script>
+<script src="reveal.js"></script>
+<script src="main.js"></script>
+<script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cmvanzh080dyvqj2ab6z72nbm"></script>
+</body>
+</html>
