@@ -1,4 +1,4 @@
 {
   "compilerOptions": { "target": "ES2020", "checkJs": false, "lib": ["ES2020", "DOM", "DOM.Iterable"] },
-  "include": ["*.js"]
+  "include": ["*.js", "js/carousel.js", "js/chat.js", "js/contact.js", "js/data.js", "js/gallery.js", "js/hero.js", "js/main.js", "js/modal.js", "js/packages.js", "js/reveal.js", "js/server.js", "js/theme.js", "js/ui.js", "js/utils.js"]
 }

@@ -13,14 +13,14 @@ document.documentElement.dataset.theme=t})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="base.css">
-<link rel="stylesheet" href="nav.css">
-<link rel="stylesheet" href="hero.css">
-<link rel="stylesheet" href="services.css">
-<link rel="stylesheet" href="packages.css">
-<link rel="stylesheet" href="gallery.css">
-<link rel="stylesheet" href="contact.css">
-<link rel="stylesheet" href="chat.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/packages.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/chat.css">
 <noscript><style>[data-r],.hero-c>*,.hero h1{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
@@ -75,26 +75,31 @@ document.documentElement.dataset.theme=t})();
 
 <section id="packages">
   <div class="wrap">
-    <div class="t" data-r="up"><h2>Package <em>Inclusions</em></h2><p>Pick a package to browse its inclusion sheets.</p></div>
+    <div class="t" data-r="up"><h2>Package <em>Inclusions</em></h2><p>Pick a package to see its prices and browse the photos of our price sheets. Tap a photo to zoom.</p></div>
     <div class="pk-nav" id="pkNav"><div class="pk-tabs" id="pkTabs"></div></div>
     <div class="pk">
       <div class="pk-view" data-r="left">
         <div class="pk-frame">
-          <div class="pk-stage" id="pkStage" tabindex="0" aria-label="Inclusion images — use arrow keys or drag"></div>
+          <div class="pk-stage" id="pkStage" tabindex="0" aria-label="Price sheet photos: tap to zoom, use arrow keys or swipe"></div>
           <button class="arr l" id="pkPrev" aria-label="Previous image">‹</button>
           <button class="arr r" id="pkNext" aria-label="Next image">›</button>
           <div class="pk-count" id="pkCount"></div>
         </div>
         <div class="pk-thumbs" id="pkThumbs"></div>
+        <p class="pk-hint">Tap a photo to zoom in</p>
       </div>
       <div class="pk-info" id="pkInfo" data-r="right">
         <h3 id="pkName"></h3>
-        <div class="pk-price">Starting at<b id="pkFrom"></b></div>
+        <div class="pk-price" id="pkPrice">Starting at<b id="pkFrom"></b></div>
         <p id="pkDesc"></p>
+        <ul class="tiers" id="pkTiers"></ul>
+        <p class="pk-hint" id="pkTierHint">Tap a name or size to jump to its price sheet</p>
+        <div class="pk-sub" id="pkSub">What's included</div>
         <ul id="pkList"></ul>
+        <p class="pk-perk" id="pkPerk"></p>
         <div class="pk-act">
-          <button class="btn" id="pkBook">Book this package</button>
-          <a class="btn o" data-link="facebook" target="_blank" rel="noopener">See more <i data-icon="fb"></i></a>
+          <button class="btn" id="pkBook">Book this</button>
+          <a class="btn o" data-link="messenger" target="_blank" rel="noopener">Ask on Messenger <i data-icon="msg"></i></a>
         </div>
       </div>
     </div>
@@ -116,7 +121,7 @@ document.documentElement.dataset.theme=t})();
       <a class="ch" data-link="messenger" target="_blank" rel="noopener" data-r="up"><i data-icon="msg"></i><div><b>Chat with us</b><span>Messenger</span></div></a>
       <a class="ch" data-link="email" data-r="up" style="--d:.08s"><i data-icon="mail"></i><div><b>Send an email</b><span>bigdreamevents25@gmail.com</span></div></a>
       <a class="ch" data-link="instagram" target="_blank" rel="noopener" data-r="up" style="--d:.16s"><i data-icon="ig"></i><div><b>Follow us on Instagram</b><span>@bigdreameventby.aki_ali</span></div></a>
-      <a class="ch" data-link="facebook" target="_blank" rel="noopener" data-r="up" style="--d:.24s"><i data-icon="fb"></i><div><b>Visit us on Facebook</b><span>Big Dream Events by Aki & Ali </span></div></a>
+      <a class="ch" data-link="facebook" target="_blank" rel="noopener" data-r="up" style="--d:.24s"><i data-icon="fb"></i><div><b>Visit us on Facebook</b><span>Big Dream Events</span></div></a>
     </div>
   </div>
 </section>
@@ -132,26 +137,32 @@ document.documentElement.dataset.theme=t})();
 
 <dialog id="dlg"><button class="x" id="dx" aria-label="Close">✕</button><div class="dg"><div id="dimg"></div><div class="bd">
   <h3 id="dt2"></h3><div class="p" id="dp"></div>
-  <label>Package styles</label><div class="sty" id="dsty"></div>
-  <label>Inclusions</label><ul id="dul"></ul>
-  <button class="btn" id="dbook">Book this style</button>
+  <p class="dnote" id="dnote"></p>
+  <label id="dstyl">Choose a package</label>
+  <div class="sty" id="dsty"></div>
+  <div class="dsel" id="dsel"></div>
+  <ul class="tiers" id="dtiers"></ul>
+  <label>What's included</label><ul id="dul"></ul>
+  <div class="dact"><button class="btn" id="dbook">Book this</button><button class="btn o" id="dsheets">See price sheet</button></div>
 </div></div></dialog>
+
+<dialog id="zoom"><button class="x" id="zx" aria-label="Close">✕</button><div class="zs"><img id="zimg" alt="Inclusion sheet, tap to zoom"></div></dialog>
 
 <div class="fab"><button id="top" aria-label="Back to top">↑</button></div>
 
-<script src="data.js"></script>
-<script src="utils.js"></script>
-<script src="theme.js"></script>
-<script src="ui.js"></script>
-<script src="hero.js"></script>
-<script src="carousel.js"></script>
-<script src="modal.js"></script>
-<script src="packages.js"></script>
-<script src="gallery.js"></script>
-<script src="contact.js"></script>
-<script src="chat.js"></script>
-<script src="reveal.js"></script>
-<script src="main.js"></script>
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/packages.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/main.js"></script>
 <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cmvanzh080dyvqj2ab6z72nbm"></script>
 </body>
 </html>
