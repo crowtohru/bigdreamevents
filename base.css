@@ -63,3 +63,17 @@ main{overflow-x:clip}
   .cue,.gold-text,.fab #chatBtn,.slide .slot,.hero h1{animation:none!important}
   .hero-c>*,[data-r]{opacity:1!important;transform:none!important}
 }
+
+/* price rows (service pop-up + Packages) */
+.tiers{list-style:none;margin:.9rem 0}
+.tiers li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.6rem 0;border-bottom:1px dashed var(--bd)}
+.tiers li:last-child{border-bottom:0}
+.tiers .tn{font:700 .85rem var(--f-h);letter-spacing:.08em;text-transform:uppercase;color:var(--tx)}
+.tiers .tn small{display:block;font:500 .95rem var(--f-b);letter-spacing:0;text-transform:none;color:var(--mu)}
+.tiers .tp{text-align:right;font:700 1.05rem var(--f-h);color:var(--gold-t);white-space:nowrap}
+.tiers .tp s{display:block;font:500 .85rem var(--f-b);color:var(--mu)}
+.tiers .tp small{display:block;font:500 .9rem var(--f-b);color:var(--mu)}
+
+.tiers li.clk{cursor:pointer;padding-inline:.6rem;margin-inline:-.6rem;border-radius:12px;transition:background .25s}
+.tiers li.clk:hover,.tiers li.clk:focus-visible{background:rgba(242,182,50,.16);outline:0}
+.tiers li.sel{background:rgba(242,182,50,.22)}
