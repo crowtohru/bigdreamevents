@@ -21,17 +21,16 @@ const HERO_IMG = [
   "images/carousel6.jpg",
 ];
 
-const GALLERY = [];             /* 6 gallery photos */
-const CONTACT_BG = "";          /* contact section background */
+const GALLERY = [
+  "images/Gallery1.jpg",
+  "images/Gallery2.jpg",
+  "images/Gallery3.jpg",
+  "images/Gallery4.jpg",
+  "images/Gallery5.jpg",
+  "images/Gallery6.jpg",
+];             /* 6 gallery photos */
+const CONTACT_BG = "images/Background1.jpg";          /* contact section background */
 const IMG = {};                 /* optional cover photo per service card, key = the service name, e.g. IMG["Wedding"] = "images/wedding-cover.jpg" */
-
-/* ===================================================================
-   SERVICES AND PACKAGES  (taken from the price binder)
-   One list drives the Services carousel, the pop-up and the Packages section.
-   - tiers : the sizes/prices.  p = price, was = old crossed-out price, p2 = second line (e.g. "₱93,000 with venue")
-   - inc   : key inclusions shown on the website
-   - imgs  : photos of the binder pages (shown in the Packages section, tap to zoom)
-   =================================================================== */
 const SHEETS = "images/sheets/";
 const S = f => SHEETS + f;
 
@@ -158,7 +157,7 @@ const SERVICES = [
       "Freebies: 1-layer cake, invitations, event planning assistant, 10 table centerpieces, welcome board, light number standee",
       "The 150 pax package includes a grazing bar"
     ],
-    imgs:[S("14-kiddie-amusing-adult-overview.jpg"), S("12-adult-120-150.jpg")] },
+    imgs:[("images/Adult1.jpg"), ("images/Adult2.jpg")] },
 
   { id:"corporate", cat:"Event Packages", n:"Corporate Event", e:"🏢", price:"Starting at ₱74,000", from:"₱74,000",
     note:"Price varies depending on the number of pax.",
@@ -180,7 +179,7 @@ const SERVICES = [
       "Freebies: 2 coordinators, gift table, registration table",
       "Add-ons: souvenir, photobooth, video coverage, bars, HMU, hosting, projector"
     ],
-    imgs:[S("09-corporate.jpg")] },
+    imgs:[("images/Corporate.jpg")] },
 
   /* ---------- COORDINATION ---------- */
   { id:"otdw", cat:"Coordination", n:"OTD Wedding Coordination", e:"📋", price:"Starting at ₱10,000", from:"₱10,000",
@@ -200,7 +199,7 @@ const SERVICES = [
       "In charge of registration, guest assistance, wedding timeline, gift management, souvenirs, suppliers, church coordination, overall management and crew meals",
       "Freebies: event signature frame and registration table"
     ],
-    imgs:[S("11-otd-wedding-overview-elevation.jpg"), S("10-otd-wedding-rosy-elegant.jpg")] },
+    imgs:[("images/Marriage.jpg")] },
 
   { id:"otdd", cat:"Coordination", n:"OTD Debut Coordination", e:"🎀", price:"Starting at ₱9,000", from:"₱9,000",
     note:"Exclusive deals this season. Limited slots only!",
@@ -219,7 +218,7 @@ const SERVICES = [
       "Overall management, distribution of crew meals, emcee and coordinators",
       "Seating arrangement"
     ],
-    imgs:[S("08-otd-debut-promo-sweet.jpg"), S("07-otd-debut-fine-lovely.jpg")] },
+    imgs:[("images/Debut.jpg")] },
 
   /* ---------- BARS & FOOD ---------- */
   { id:"mobilebar", cat:"Bars & Food", n:"Mobile Bar", e:"🍸", price:"Starting at ₱15,000", from:"₱15,000",
@@ -241,7 +240,7 @@ const SERVICES = [
       "Customized granite top bar setup, bartenders and bar backs, complete glassware and accessories, purified water and ice",
       "Freebies: pika-pika (nuts and chips), a bottle of red wine, half case of local beer, free service of guests' liquor, breakfast for 2, Kanto freestyle"
     ],
-    imgs:[S("04-wedding-radiant-mobile-bar.jpg")] },
+    imgs:[("images/Mobile.jpg")] },
 
   { id:"grazing", cat:"Bars & Food", n:"Grazing Bar", e:"🧀", price:"Starting at ₱15,900", from:"₱15,900",
     note:"Gather, graze and enjoy. The perfect spread awaits!",
@@ -267,7 +266,7 @@ const SERVICES = [
       "No transportation fee in northern Metro Manila; minimal fee for southern Metro Manila",
       "50% downpayment on contract signing; the other 50% before the event starts"
     ],
-    imgs:[S("02-grazing-bar.jpg")] },
+    imgs:[("images/Grazing.jpg")] },
 
   { id:"sushi", cat:"Bars & Food", n:"Sushi Bar", e:"🍣", price:"Starting at ₱28,000", from:"₱28,000",
     note:"₱6,000 downpayment to reserve your slot.",
@@ -285,12 +284,12 @@ const SERVICES = [
       "Free dedication maki platter, disposable utensils, unlimited sushi condiments",
       "On-the-spot sushi prep with a sushi chef and a table attendant"
     ],
-    imgs:[S("03-sushi-bar.jpg")] },
+    imgs:[("images/Sushi.jpg")] },
 
   { id:"takoyaki", cat:"Bars & Food", n:"Takoyaki Bar", e:"🐙", price:"Starting at ₱8,000", from:"₱8,000",
-    note:"Price from our earlier website. Message us for the pax list.", tiers:[], inc:[] },
+    note:"Price from our earlier website. Message us for the pax list.", tiers:[], inc:[], imgs:[("images/Takoyaki.jpg")] },
   { id:"coffee", cat:"Bars & Food", n:"Coffee Bar", e:"☕", price:"Starting at ₱10,500", from:"₱10,500",
-    note:"Price from our earlier website. Message us for the pax list.", tiers:[], inc:[] },
+    note:"Price from our earlier website. Message us for the pax list.", tiers:[], inc:[], imgs:[("images/Coffee.jpg")] },
 
   { id:"menu", cat:"Bars & Food", n:"Catering Menu", e:"🍽️", price:"₱650 per head", from:"",
     note:"Choose from our catering menu. Packages include 3 main dishes (pork, chicken and fish), rice, a pasta or vegetable dish, dessert and drinks.",
@@ -306,7 +305,7 @@ const SERVICES = [
       "Drinks: four season · cucumber lime · red iced tea · blue lemonade · pineapple juice",
       "Add-on soups: creamy mushroom · creamy pumpkin · crab and corn"
     ],
-    imgs:[S("20-menu-contents.jpg")] },
+    imgs:[("images/Catering.jpg")] },
 
   /* ---------- RENTALS & ADD-ONS ---------- */
   { id:"equipment", cat:"Rentals & Add-ons", n:"Equipment Rental", e:"🪑", price:"From ₱30 per piece", from:"₱30",
@@ -330,14 +329,14 @@ const SERVICES = [
       { n:"Set of utensils",               pax:"plate, highball glass, goblet, spoon and fork", p:"₱50" }
     ],
     inc:[],
-    imgs:[S("01-equipment-rental.jpg")] },
+    imgs:[("images/Equipment.jpg")] },
 
   { id:"sounds", cat:"Rentals & Add-ons", n:"Lights & Sounds", e:"🔊", price:"Starting at ₱12,000", from:"₱12,000",
-    note:"Price from our earlier website. Packages include a standard sound and lights set with DJ and tech crew.", tiers:[], inc:[] },
+    note:"Price from our earlier website. Packages include a standard sound and lights set with DJ and tech crew.", tiers:[], inc:[], imgs:[("images/Soundbooth.jpg")] },
   { id:"photobooth", cat:"Rentals & Add-ons", n:"Photobooth", e:"🤳", price:"Starting at ₱3,500", from:"₱3,500",
-    note:"Price from our earlier website. Ask about photobooth packages.", tiers:[], inc:[] },
+    note:"Price from our earlier website. Ask about photobooth packages.", tiers:[], inc:[], imgs:[("images/Photobooth.jpg")] },
   { id:"hmu", cat:"Rentals & Add-ons", n:"HMU Service", e:"💄", price:"Inquire for quote", from:"",
-    note:"Hair and makeup, including airbrush options. Message us for a quote.", tiers:[], inc:[] },
+    note:"Hair and makeup, including airbrush options. Message us for a quote.", tiers:[], inc:[], imgs:[("images/HMU.jpg")] },
 
   /* ---------- MORE (from the earlier website; not in the binder) ---------- */
   { id:"proposal", cat:"More Services", n:"Wedding Proposal", e:"💐", price:"Inquire for quote", from:"", note:"", tiers:[], inc:[] },
