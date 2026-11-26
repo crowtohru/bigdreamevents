@@ -36,18 +36,18 @@ const S = f => SHEETS + f;
 
 const SERVICES = [
   /* ---------- EVENT PACKAGES ---------- */
-  { id:"wedding", cat:"Event Packages", n:"Wedding", e:"💍", price:"Starting at ₱130,000", from:"₱130,000",
+  { id:"wedding", cat:"Event Packages", n:"Wedding", e:"💍", price:"Starting at ₱85,000", from:"₱85,000",
     note:"Complete packages with venue, within your area. ₱30,000 off on all wedding packages.",
     perks:["Gift voucher for Camaya Coast, Bataan (4-person day tour) with any package"],
     tiers:[
-      { n:"Magical",  pax:"80 pax",  p:"₱130,000", was:"₱160,000", sheet:0,
-         inc:["Good for 80 pax, with venue", "1 layered cake, smoke machine, photobooth and 1 bottle of wine", "3-4 hours of hosting, 2 OTD coordinators and 1 event organizer", "Hair and makeup (HMU service) is available as an add-on"] },
-      { n:"Romantic", pax:"100 pax", p:"₱190,000", was:"₱220,000", sheet:1,
-         inc:["Good for 100 pax, with venue", "2-layered cake and unlimited photobooth for 2 hours", "Prenuptial pictorial session and modern white bridal car", "Entourage flowers, plus hair and makeup for bride and groom", "4 OTD coordinators and 1 event organizer"] },
-      { n:"Euphoric", pax:"120 pax", p:"₱220,000", was:"₱250,000", sheet:2,
-         inc:["Good for 120 pax, with venue", "Everything in Romantic", "Grazing bar for 50 pax included", "5 OTD coordinators and 1 event organizer"] },
-      { n:"Radiant",  pax:"150 pax", p:"₱260,000", was:"₱290,000", sheet:3,
-         inc:["Good for 150 pax, with venue", "Everything in Euphoric", "4-hour mobile bar included, with 8 drinks on your personal drink menu", "Same-day-edit photo coverage", "5 OTD coordinators and 1 event organizer"] }
+      { n:"Everlasting",  pax:"50 pax",  p:"₱85,000", was:"₱92,000", sheet:1,
+         inc:["Good for 50 pax, with venue", "1 layered cake, smoke machine, photobooth and 1 bottle of wine", "3-4 hours of hosting, 2 OTD coordinators and 1 event organizer", "Hair and makeup (HMU service) is available as an add-on"] },
+      { n:"Forever & Always", pax:"80 pax", p:"₱116,000", was:"₱124,000", sheet:2,
+         inc:["Good for 80 pax, with venue", "2-layered cake and unlimited photobooth for 2 hours", "Prenuptial pictorial session and modern white bridal car", "Entourage flowers, plus hair and makeup for bride and groom", "4 OTD coordinators and 1 event organizer"] },
+      { n:"Royal Package", pax:"100 pax", p:"₱165,000", was:"₱177,000", sheet:3,
+         inc:["Good for 100 pax, with venue", "Everything in Forever & Always", "Grazing bar for 50 pax included", "5 OTD coordinators and 1 event organizer"] },
+      { n:"Diamond Package",  pax:"120 pax", p:"₱188,000", was:"₱201,000", sheet:4,
+         inc:["Good for 120 pax, with venue", "Everything in Royal", "4-hour mobile bar included, with 8 drinks on your personal drink menu", "Same-day-edit photo coverage", "5 OTD coordinators and 1 event organizer"] }
     ],
     inc:[
       "Venue included, complete package within your area",
@@ -59,20 +59,20 @@ const SERVICES = [
       "Romantic, Euphoric and Radiant add: 2-layered cake, unlimited photobooth for 2 hours, prenuptial pictorial, modern white bridal car, entourage flowers, hair and makeup",
       "Euphoric and Radiant also include a grazing bar for 50 pax; Radiant adds a 4-hour mobile bar"
     ],
-    imgs:[("images/MagicalWedding.jpg"), ("images/RomanticWedding.jpg"), ("images/EuphoricWedding.jpg"), ("images/RadiantWedding.jpg")] },
+    imgs:[("images/OTDWedding.jpg"), ("images/OTDWedding1.jpg"), ("images/OTDWedding2.jpg"), ("images/OTDWedding3.jpg"), ("images/OTDWedding4.jpg")] },
 
-  { id:"debut", cat:"Event Packages", n:"Debut", e:"👗", price:"Starting at ₱68,000", from:"₱68,000",
+  { id:"debut", cat:"Event Packages", n:"Debut", e:"👗", price:"Starting at ₱88,000", from:"₱88,000",
     note:"Prices are without venue. Add ₱25,000 for with venue.",
     perks:["Gift voucher for Camaya Coast, Bataan (4-person day tour) with any package"],
     tiers:[
-      { n:"Gloss",    pax:"80 pax",  p:"₱68,000",  p2:"₱93,000 with venue", sheet:0,
-         inc:["Good for 80 pax", "Photographer from preparation to recognition and unlimited photobooth for 2 hours", "3-4 hours of hosting, 2 OTD coordinators and 2 event organizers", "18 roses, 18 candles and red wine for the 18 toast"] },
-      { n:"Dazzle",   pax:"100 pax", p:"₱75,000",  p2:"₱100,000 with venue", sheet:1,
-         inc:["Good for 100 pax", "Everything in Gloss", "Full coverage with preparation shots and a 3-5 minute video highlight"] },
-      { n:"Gorgeous", pax:"120 pax", p:"₱119,000", p2:"₱144,000 with venue", sheet:2,
-         inc:["Good for 120 pax", "Everything in Dazzle", "Airbrush hair and makeup: up to 3 looks, 3D lashes, skin care prep and eyebrow shaping"] },
-      { n:"Stunning", pax:"150 pax", p:"₱144,000", p2:"₱169,000 with venue", sheet:3,
-         inc:["Good for 150 pax", "Everything in Gorgeous", "4-hour mobile bar with 8 drinks on your personal drink menu"] }
+      { n:"Classic", pax:"50 pax",  p:"₱88,000", sheet:1,
+         inc:["Good for 50 pax", "Photographer from preparation to recognition and unlimited photobooth for 2 hours", "3-4 hours of hosting, 2 OTD coordinators and 2 event organizers", "18 roses, 18 candles and red wine for the 18 toast"] },
+      { n:"Signature", pax:"80 pax", p:"₱92,000", sheet:2,
+         inc:["Good for 80 pax", "Everything in Gloss", "Full coverage with preparation shots and a 3-5 minute video highlight"] },
+      { n:"Elegance", pax:"100 pax", p:"₱125,000", sheet:3,
+         inc:["Good for 100 pax", "Everything in Dazzle", "Airbrush hair and makeup: up to 3 looks, 3D lashes, skin care prep and eyebrow shaping"] },
+      { n:"Prestige", pax:"120 pax", p:"₱135,000", sheet:4,
+         inc:["Good for 120 pax", "Everything in Gorgeous", "4-hour mobile bar with 8 drinks on your personal drink menu"] }
     ],
     inc:[
       "Catering: 3 main dishes, rice, pasta or vegetables, dessert, drinks, buffet setup, uniformed waiters",
@@ -84,28 +84,18 @@ const SERVICES = [
       "Dazzle, Gorgeous and Stunning add full photo coverage with a 3-5 minute video highlight",
       "Gorgeous and Stunning add airbrush hair and makeup; Stunning adds a 4-hour mobile bar"
     ],
-    imgs:[("images/GlossDebut.jpg"), ("images/DazzleDebut.jpg"), ("images/GorgeousDebut.jpg"), ("images/StunningDebut.jpg")] },
+    imgs:[("images/Debut.jpg"), ("images/Debut1.jpg"), ("images/Debut2.jpg"), ("images/Debut3.jpg"), ("images/Debut4.jpg")] },
 
-  { id:"baptismal", cat:"Event Packages", n:"Baptismal", e:"🕊️", price:"Starting at ₱56,000", from:"₱56,000",
+  { id:"baptismal", cat:"Event Packages", n:"Baptismal", e:"🕊️", price:"Starting at ₱55,000", from:"₱55,000",
     note:"Prices are without venue. Add ₱25,000 if with venue.",
     perks:["Gift voucher for Camaya Coast, Bataan (4-person day tour) with any package"],
     tiers:[
-      { n:"Celestial",  pax:"80 pax",  p:"₱56,000", sheet:0,
+      { n:"Little Blessing",  pax:"50 pax",  p:"₱55,000", sheet:1,
+         inc:["Good for 50 pax", "1 layer cake", "10 table centerpieces, photo standee or welcome board, lighted number standee", "Basic lights and sounds system included", "Add ₱25,000 if with venue"] },
+      { n:"Blessed Moments",  pax:"80 pax", p:"₱80,000", sheet:2,
          inc:["Good for 80 pax", "1 layer cake", "10 table centerpieces, photo standee or welcome board, lighted number standee", "Basic lights and sounds system included", "Add ₱25,000 if with venue"] },
-      { n:"Celestial",  pax:"100 pax", p:"₱65,000", sheet:0,
+      { n:"Heavenely Celebration",  pax:"100 pax", p:"₱100,000", sheet:3,
          inc:["Good for 100 pax", "1 layer cake", "10 table centerpieces, photo standee or welcome board, lighted number standee", "Basic lights and sounds system included", "Add ₱25,000 if with venue"] },
-      { n:"Celestial",  pax:"120 pax", p:"₱75,000", sheet:0,
-         inc:["Good for 120 pax", "1 layer cake", "10 table centerpieces, photo standee or welcome board, lighted number standee", "Basic lights and sounds system included", "Add ₱25,000 if with venue"] },
-      { n:"Celestial",  pax:"150 pax", p:"₱88,000", sheet:0,
-         inc:["Good for 150 pax", "1 layer cake", "10 table centerpieces, photo standee or welcome board, lighted number standee", "Basic lights and sounds system included", "Add ₱25,000 if with venue"] },
-      { n:"Enchanting", pax:"80 pax",  p:"₱68,000", sheet:1,
-         inc:["Good for 80 pax", "2 layers cake", "Unlimited photobooth for 2 hours", "Professional photographer with enhanced photos via Google Drive", "Basic lights and sounds system included", "Add ₱25,000 if with venue"] },
-      { n:"Enchanting", pax:"100 pax", p:"₱79,000", sheet:1,
-         inc:["Good for 100 pax", "2 layers cake", "Unlimited photobooth for 2 hours", "Professional photographer with enhanced photos via Google Drive", "Basic lights and sounds system included", "Add ₱25,000 if with venue"] },
-      { n:"Enchanting", pax:"120 pax", p:"₱88,000", sheet:1,
-         inc:["Good for 120 pax", "2 layers cake", "Unlimited photobooth for 2 hours", "Professional photographer with enhanced photos via Google Drive", "Basic lights and sounds system included", "Add ₱25,000 if with venue"] },
-      { n:"Enchanting", pax:"150 pax", p:"₱105,000", sheet:1,
-         inc:["Good for 150 pax", "2 layers cake", "Unlimited photobooth for 2 hours", "Professional photographer with enhanced photos via Google Drive", "Basic lights and sounds system included", "Add ₱25,000 if with venue"] }
     ],
     inc:[
       "Catering: 3 main dishes, rice, pasta or vegetables, dessert, drinks, motif of your choice, buffet setup",
@@ -115,15 +105,17 @@ const SERVICES = [
       "Celestial freebies: 1-layer cake, 10 table centerpieces, photo standee or welcome board, lighted number standee",
       "Enchanting upgrades: 2-layer cake, unlimited photobooth for 2 hours, professional photographer, enhanced photos via Google Drive"
     ],
-    imgs:[("images/Baptismal1.jpg"), ("images/Baptismal2.jpg")] },
+    imgs:[("images/Baptismal1.jpg"), ("images/Baptismal.jpg"), ("images/Baptismal2.jpg"), ("images/Baptismal3.jpg")] },
 
-  { id:"kiddie", cat:"Event Packages", n:"Kiddie Party", e:"🎈", price:"Starting at ₱60,000", from:"₱60,000",
+  { id:"kiddie", cat:"Event Packages", n:"Kiddie Party", e:"🎈", price:"Starting at ₱68,000", from:"₱68,000",
     note:"Prices are without venue. With venue is ₱25,000 more.",
     perks:["Gift voucher for Camaya Coast, Bataan (4-person day tour) with any package"],
     tiers:[
-      { n:"Bubbly",  pax:"50 adults + 30 kids (80 pax)",  p:"₱60,000", p2:"₱85,000 with venue", sheet:0,
-         inc:["50 adults + 30 kids (80 pax)", "1 tier cake", "2 clowns (host and magic show) and 3 coordinators", "Sweet treats / candy buffet and 30 kiddie loot bags"] },
-      { n:"Amusing", pax:"70 adults + 30 kids (100 pax)", p:"₱75,000", p2:"₱100,000 with venue", sheet:1,
+      { n:"Little Dreamer",  pax:"30 adults + 20 kids (50 pax)",  p:"₱68,000", sheet:1,
+         inc:["30 adults + 20 kids (50 pax)", "1 tier cake", "2 clowns (host and magic show) and 3 coordinators", "Sweet treats / candy buffet and 30 kiddie loot bags"] },
+      { n:"Magical Moments", pax:"60 adults + 20 kids (80 pax)", p:"₱87,000", sheet:2,
+         inc:["60 adults + 20 kids (80 pax)", "2 tier cake and unlimited photobooth for 2 hours", "2 clowns (host and magic show) and 3 coordinators", "Sweet treats / candy buffet and 30 kiddie loot bags"] },
+      { n:"Royal Kids", pax:"70 adults + 30 kids (100 pax)", p:"₱98,000", sheet:3,
          inc:["70 adults + 30 kids (100 pax)", "2 tier cake and unlimited photobooth for 2 hours", "2 clowns (host and magic show) and 3 coordinators", "Sweet treats / candy buffet and 30 kiddie loot bags"] }
     ],
     inc:[
@@ -134,19 +126,19 @@ const SERVICES = [
       "Sweet treats and candy buffet, registration table, 30 kiddie loot bags",
       "Bubbly: 1-tier cake. Amusing: 2-tier cake and unlimited photobooth for 2 hours"
     ],
-    imgs:[("images/BubblyParty.jpg"), ("images/AmusingParty.jpg")] },
+    imgs:[("images/Kiddie.jpg"), ("images/Kiddie1.jpg"), ("images/Kiddie2.jpg"), ("images/Kiddie3.jpg")] },
 
-  { id:"adult", cat:"Event Packages", n:"Adult Party", e:"🥂", price:"Starting at ₱76,000", from:"₱76,000",
+  { id:"adult", cat:"Event Packages", n:"Adult Party", e:"🥂", price:"Starting at ₱88,000", from:"₱88,000",
     note:"Prices shown are without venue and with venue. Detailed inclusions are on the 120 and 150 pax sheets.",
     perks:["Gift voucher for Camaya Coast, Bataan (4-person day tour) with any package"],
     tiers:[
-      { n:"80 pax",  p:"₱76,000",  p2:"₱101,000 with venue", sheet:0,
+      { n:"Silver Elegant", pax:"50 pax",  p:"₱88,000", sheet:2,
          inc:["Good for 80 pax", "The detailed list is shown for the 120 and 150 pax packages. Message us for this size's exact inclusions."] },
-      { n:"100 pax", p:"₱94,000",  p2:"₱119,000 with venue", sheet:0,
+      { n:"Golden Celebration", pax:"80 pax", p:"₱95,000",  sheet:3,
          inc:["Good for 100 pax", "The detailed list is shown for the 120 and 150 pax packages. Message us for this size's exact inclusions."] },
-      { n:"120 pax", p:"₱112,000", p2:"₱137,000 with venue", sheet:1,
+      { n:"Premium Package", pax:"100 pax", p:"₱115,000", sheet:4,
          inc:["Good for 120 pax", "Photographer, unlimited photobooth for 2 hours and a 3-5 minute video highlight", "1 layer cake, event planning assistant, 10 table centerpieces", "Grazing bar is available as an add-on"] },
-      { n:"150 pax", p:"₱140,000", p2:"₱165,000 with venue", sheet:1,
+      { n:"Platinum Package", pax:"120 pax", p:"₱155,000", sheet:0,
          inc:["Good for 150 pax", "Everything in the 120 pax package", "Grazing bar included"] }
     ],
     inc:[
@@ -157,19 +149,19 @@ const SERVICES = [
       "Freebies: 1-layer cake, invitations, event planning assistant, 10 table centerpieces, welcome board, light number standee",
       "The 150 pax package includes a grazing bar"
     ],
-    imgs:[("images/Adult1.jpg"), ("images/Adult2.jpg")] },
+    imgs:[("images/OTDAdult.jpg"), ("images/OTDAdult1.jpg"), ("images/OTDAdult2.jpg"), ("images/OTDAdult3.jpg"), ("images/OTDAdult4.jpg")] },
 
   { id:"corporate", cat:"Event Packages", n:"Corporate Event", e:"🏢", price:"Starting at ₱74,000", from:"₱74,000",
     note:"Price varies depending on the number of pax.",
     perks:["Gift voucher for Camaya Coast, Bataan (4-person day tour) with any package"],
     tiers:[
-      { n:"80 pax",  p:"₱74,000",  p2:"₱99,000 with venue", sheet:0,
+      { n:"Christmas Classic",  p:"₱88,000", pax:"80 pax", sheet:1,
          inc:["Good for 80 pax", "2 coordinators, gift table and registration table", "Price varies depending on the number of pax"] },
-      { n:"100 pax", p:"₱92,000",  p2:"₱117,000 with venue", sheet:0,
+      { n:"Christmas Deluxe", p:"₱95,000", pax:"100 pax", sheet:2,
          inc:["Good for 100 pax", "2 coordinators, gift table and registration table", "Price varies depending on the number of pax"] },
-      { n:"150 pax", p:"₱106,000", p2:"₱131,000 with venue", sheet:0,
+      { n:"Christmas Elite", p:"₱120,000", pax:"150 pax", sheet:3,
          inc:["Good for 150 pax", "2 coordinators, gift table and registration table", "Price varies depending on the number of pax"] },
-      { n:"200 pax", p:"₱131,000", p2:"₱156,000 with venue", sheet:0,
+      { n:"Big Event", p:"₱148,000", pax:"200 pax", sheet:4,
          inc:["Good for 200 pax", "2 coordinators, gift table and registration table", "Price varies depending on the number of pax"] }
     ],
     inc:[
@@ -179,7 +171,7 @@ const SERVICES = [
       "Freebies: 2 coordinators, gift table, registration table",
       "Add-ons: souvenir, photobooth, video coverage, bars, HMU, hosting, projector"
     ],
-    imgs:[("images/Corporate.jpg")] },
+    imgs:[("images/Corporate0.jpg"), ("images/Corporate.jpg"), ("images/Corporate1.jpg"), ("images/Corporate2.jpg"), ("images/Corporate3.jpg")] },
 
   /* ---------- COORDINATION ---------- */
   { id:"otdw", cat:"Coordination", n:"OTD Wedding Coordination", e:"📋", price:"Starting at ₱10,000", from:"₱10,000",
@@ -208,7 +200,7 @@ const SERVICES = [
          inc:["Good for 80 pax", "Exclusive deal this season, limited slots only"] },
       { n:"Fine",   pax:"100 pax", p:"₱12,000", was:"₱17,000", sheet:1,
          inc:["Good for 100 pax", "Exclusive deal this season, limited slots only"] },
-      { n:"Lovely", pax:"150 pax", p:"₱14,000", was:"₱19,000", sheet:1,
+      { n:"Lovely", pax:"150 pax", p:"₱14,000", was:"₱19,000", sheet:2,
          inc:["Good for 150 pax", "Exclusive deal this season, limited slots only"] }
     ],
     inc:[
@@ -218,7 +210,7 @@ const SERVICES = [
       "Overall management, distribution of crew meals, emcee and coordinators",
       "Seating arrangement"
     ],
-    imgs:[("images/Debut.jpg")] },
+    imgs:[("images/Debut.jpg"), ("images/Debut1.jpg"), ("images/Debut2.jpg"), ("images/Debut3.jpg")] },
 
   /* ---------- BARS & FOOD ---------- */
   { id:"mobilebar", cat:"Bars & Food", n:"Mobile Bar", e:"🍸", price:"Starting at ₱15,000", from:"₱15,000",
@@ -254,7 +246,7 @@ const SERVICES = [
          inc:["Good for 100 pax", "4 hours consumable with a table attendant", "Freebie: blue lemonade or lemon iced tea"] },
       { n:"120 pax", p:"₱23,900", sheet:0,
          inc:["Good for 120 pax", "4 hours consumable with a table attendant", "Freebie: blue lemonade or lemon iced tea"] },
-      { n:"150 pax", p:"₱29,500", sheet:0,
+      { n:"150 pax", p:"₱29,900", sheet:0,
          inc:["Good for 150 pax", "4 hours consumable with a table attendant", "Freebie: blue lemonade or lemon iced tea"] }
     ],
     inc:[
@@ -287,9 +279,46 @@ const SERVICES = [
     imgs:[("images/Sushi.jpg")] },
 
   { id:"takoyaki", cat:"Bars & Food", n:"Takoyaki Bar", e:"🐙", price:"Starting at ₱8,000", from:"₱8,000",
-    note:"Price from our earlier website. Message us for the pax list.", tiers:[], inc:[], imgs:[("images/Takoyaki.jpg")] },
+    note:"Price from our earlier website. Message us for the pax list.", 
+    tiers:[
+      { n:"50 Pax", pax:"50 pax",  p:"₱8,500", sheet:0,
+        inc:["Good for 80 pax", "2 Premium Flavors"] },
+      { n:"100 Pax", pax:"100 pax", p:"₱16,500", sheet:0,
+        inc:["Good for 100 pax", "2 Premium Flavors"] },
+      { n:"150 Pax", pax:"150 pax", p:"₱25,000", sheet:0,
+        inc:["Good for 150 pax", "2 Premium Flavors"] }
+    ], 
+    inc:[
+      "4 Takoyaki Balls per pax rule",
+      "2 to 3 Trained Staff",
+      "Served in a platter per flavor",
+      "Client will provide table and electricity for the Takoyaki Machine",
+      "Transporation will be added to the total package cost depending on the location"
+    ], 
+    imgs:[("images/Takoyaki.jpg")] },
+
   { id:"coffee", cat:"Bars & Food", n:"Coffee Bar", e:"☕", price:"Starting at ₱10,500", from:"₱10,500",
-    note:"Price from our earlier website. Message us for the pax list.", tiers:[], inc:[], imgs:[("images/Coffee.jpg")] },
+    note:"Price from our earlier website. Message us for the pax list.", 
+    tiers:[
+    { n:"50 Cups", p:"₱12,000", sheet:0,
+      inc:["Addtional (Per Pack)", "816 Signatures"] },
+    { n:"100 Cups", p:"₱18,000", sheet:0,
+      inc:["Addtional (Per Pack)", "816 Signatures"] },
+    { n:"150 Cups", p:"₱25,000", sheet:0,
+      inc:["Addtional (Per Pack)", "816 Signatures"] },
+    { n:"200 Cups", p:"₱30,000", sheet:0,
+      inc:["Addtional (Per Pack)", "816 Signatures"] },
+    ], 
+    inc:[
+      "Full Set-Up Coffee Cart",
+      "Espresso Machine & Coffee Grinder",
+      "Hot and Iced Drinks",
+      "100% Arabica Beans",
+      "Premium Qualtiy Ingredients",
+      "Professional Baristas",
+      "Add-Ons: Additional Hour - ₱1,500"
+    ], 
+    imgs:[("images/Coffee.jpg")] },
 
   { id:"menu", cat:"Bars & Food", n:"Catering Menu", e:"🍽️", price:"₱650 per head", from:"",
     note:"Choose from our catering menu. Packages include 3 main dishes (pork, chicken and fish), rice, a pasta or vegetable dish, dessert and drinks.",
@@ -307,6 +336,41 @@ const SERVICES = [
     ],
     imgs:[("images/Catering.jpg")] },
 
+  { id:"perfume", cat:"Bars & Food", n:"Perfume Bar", e:"🌸", price:"Starting at ₱15,000", from:"₱15,000", note:"", 
+    tiers:[
+      { n:"10 ml", pax: "100 pax", p:"₱15,000", sheet:0,
+        inc:["Free Sticker Layout", "Free Welcome Signage"] },
+      { n:"15 ml", pax: "100 pax", p:"₱18,000", sheet:0,
+        inc:["Free Sticker Layout", "Free Welcome Signage"] },
+      { n:"30 ml", pax: "100 pax", p:"₱27,000", sheet:0,
+        inc:["Free Sticker Layout", "Free Welcome Signage"] }
+    ], 
+    inc:[
+      "3 hours Fragrance Bar setup with elegant apothecary jars",
+      "Choice 4-6 designer inspired scents perfume tester",
+      "Coffee bean to neutralized sense of smell personalized perfume bottle sticker label",
+      "Personalized claim stubs",
+      "On-Site Perfume Attendants"
+    ], 
+    imgs:[("images/Perfume.jpg")] },
+
+    { id:"flavor", cat:"Bars & Food", n:"Fruit Soda & Milktea Bar", e:"🍹", price:"Starting at ₱9,800", from:"₱9,800", note:"", 
+      tiers:[
+        { n:"The Experience", pax: "50 pax", p:"₱9,800", sheet:0,
+          inc:[] },
+      ], 
+      inc:[
+        "5 Flavors to Choose",
+        "4 Milk Tea",
+        "4 Fruit Soda",
+        "12 Oz Cups",
+        "Long Table Setup",
+        "2 to 3 Crews",
+        "Complimentary Brownies",
+        "4 Hours Serving"
+      ], 
+      imgs:[("images/Perfume.jpg")] },
+
   /* ---------- RENTALS & ADD-ONS ---------- */
   { id:"equipment", cat:"Rentals & Add-ons", n:"Equipment Rental", e:"🪑", price:"From ₱30 per piece", from:"₱30",
     note:"Price per piece.",
@@ -314,37 +378,60 @@ const SERVICES = [
       { n:"Round table with cover",        p:"₱300" },
       { n:"Long table with cover",         p:"₱350" },
       { n:"Cocktail table with cover",     p:"₱300" },
-      { n:"Square table with cover",       p:"₱250" },
-      { n:"Half table with cover",         p:"₱250" },
+      { n:"Square table with cover",       p:"₱200" },
+      { n:"Half table with cover",         p:"₱200" },
       { n:"Monoblock chair",               p:"₱30" },
       { n:"Monoblock chair with cover",    p:"₱50" },
       { n:"Tiffany chair",                 p:"₱80" },
       { n:"Infinity chair",                p:"₱100" },
       { n:"Ghost chair",                   p:"₱120" },
       { n:"Folded chair",                  p:"₱100" },
-      { n:"12 x 24 tent",                  p:"₱4,500" },
-      { n:"Red carpet",                    p:"₱1,200" },
-      { n:"Couch",                         p:"₱3,500" },
-      { n:"8 x 8 platform",                p:"₱2,500" },
-      { n:"Set of utensils",               pax:"plate, highball glass, goblet, spoon and fork", p:"₱50" }
+      { n:"12 x 24 tent",                  p:"₱3,500" },
+      { n:"Red carpet",                    p:"₱1,000" },
+      { n:"Wedding Couch",                 p:"₱2,500" },
+      { n:"8 x 8 platform",                p:"₱3,000" },
+      { n:"Set of utensils",               pax:"plate, highball glass, goblet, spoon and fork", p:"₱80" },
+      { n:"Set of Kids",                   pax:"(1) Long Table and (10) Chairs with Cover", p:"₱500" },
+      { n:"Beer Mug",                      p:"₱70" },
+      { n:"Beer Pilsner",                  p:"₱70" },
+      { n:"Champagne Saucer",              p:"₱100/50" },
+      { n:"Champagne Flute",               p:"₱5" },
     ],
     inc:[],
     imgs:[("images/Equipment.jpg")] },
 
   { id:"sounds", cat:"Rentals & Add-ons", n:"Lights & Sounds", e:"🔊", price:"Starting at ₱12,000", from:"₱12,000",
     note:"Price from our earlier website. Packages include a standard sound and lights set with DJ and tech crew.", tiers:[], inc:[], imgs:[("images/Soundbooth.jpg")] },
+  
   { id:"photobooth", cat:"Rentals & Add-ons", n:"Photobooth", e:"🤳", price:"Starting at ₱3,500", from:"₱3,500",
     note:"Price from our earlier website. Ask about photobooth packages.", tiers:[], inc:[], imgs:[("images/Photobooth.jpg")] },
+  
   { id:"hmu", cat:"Rentals & Add-ons", n:"HMU Service", e:"💄", price:"Inquire for quote", from:"",
     note:"Hair and makeup, including airbrush options. Message us for a quote.", tiers:[], inc:[], imgs:[("images/HMU.jpg")] },
 
-  /* ---------- MORE (from the earlier website; not in the binder) ---------- */
+  /* ---------- MORE ---------- */
   { id:"proposal", cat:"More Services", n:"Wedding Proposal", e:"💐", price:"Inquire for quote", from:"", note:"", tiers:[], inc:[] },
-  { id:"reveal",   cat:"More Services", n:"Gender Reveal", e:"💙", price:"Starting at ₱67,000", from:"₱67,000", note:"", tiers:[], inc:[] },
+  
+  { id:"reveal",   cat:"More Services", n:"Gender Reveal", e:"💙", price:"Starting at ₱67,000", from:"₱67,000", note:"", 
+    tiers:[
+      { n:"Sweet Littlee", pax:"50 pax",  p:"₱87,000", sheet:1,
+        inc:["Good for 50 pax", "Photographer from preparation to recognition and unlimited photobooth for 2 hours", "3-4 hours of hosting, 2 OTD coordinators and 2 event organizers", "18 roses, 18 candles and red wine for the 18 toast"] },
+     { n:"He or She", pax:"80 pax", p:"₱98,000", sheet:2,
+        inc:["Good for 80 pax", "Everything in Sweet Littlee", "Full coverage with preparation shots and a 3-5 minute video highlight"] },
+     { n:"The Big Reveal", pax:"100 pax", p:"₱110,000", sheet:3,
+        inc:["Good for 100 pax", "Everything in He or She"] },
+    ], 
+    inc:[], 
+    imgs:[("images/Gender.jpg"), ("images/Gender1.jpg"), ("images/Gender2.jpg"), ("images/Gender3.jpg")] },
+  
   { id:"opening",  cat:"More Services", n:"Store Grand Opening", e:"🎊", price:"Inquire for quote", from:"", note:"", tiers:[], inc:[] },
+  
   { id:"styling",  cat:"More Services", n:"Event Styling", e:"✨", price:"Starting at ₱10,000", from:"₱10,000", note:"", tiers:[], inc:[] },
+  
   { id:"hosting",  cat:"More Services", n:"Hosting Services", e:"🎤", price:"Starting at ₱10,000", from:"₱10,000", note:"", tiers:[], inc:[] },
+  
   { id:"photovid", cat:"More Services", n:"Photo & Video Coverage", e:"📸", price:"Starting at ₱6,000", from:"₱6,000", note:"", tiers:[], inc:[] },
+  
   { id:"venue",    cat:"More Services", n:"Event Venue Rental", e:"🏛️", price:"Starting at ₱18,000", from:"₱18,000", note:"", tiers:[], inc:[] }
 ];
 
