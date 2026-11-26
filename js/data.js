@@ -30,7 +30,35 @@ const GALLERY = [
   "images/Gallery6.jpg",
 ];             /* 6 gallery photos */
 const CONTACT_BG = "images/Background1.jpg";          /* contact section background */
-const IMG = {};                 /* optional cover photo per service card, key = the service name, e.g. IMG["Wedding"] = "images/wedding-cover.jpg" */
+const IMG = {
+  "Wedding": "images/Marriage.jpg",
+  "Debut": "images/Debut.jpg",
+  "Baptismal": "images/Baptismal.jpg",
+  "Kiddie Party": "images/Kiddie.jpg",
+  "Adult Party": "images/OTDAdult.jpg",
+  "Corporate Event": "images/Corporate.jpg",
+  "OTD Wedding Coordination": "images/OTDWedding.jpg",
+  "OTD Debut Coordination": "images/Debut.jpg",
+  "Mobile Bar": "images/Mobile.jpg",
+  "Grazing Bar": "images/Grazing.jpg",
+  "Sushi Bar": "images/Sushi.jpg",
+  "Takoyaki Bar": "images/Takoyaki.jpg",
+  "Coffee Bar": "images/Coffee.jpg",
+  "Catering Menu": "images/Catering.jpg",
+  "Perfume Bar": "images/Perfume.jpg",
+  "Fruit Soda & Milktea Bar": "images/Fruit.jpg",
+  "Equipment Rental": "images/Equipment.jpg",
+  "Lights & Sounds": "images/Soundbooth.jpg",
+  "Photobooth": "images/Photobooth.jpg",
+  "HMU Service": "images/HMU.jpg",
+  "Wedding Proposal": "images/Proposal  .jpg",
+  "Gender Reveal": "images/Gender.jpg",
+  "Store Grand Opening": "images/GrandOpening.jpg",
+  "Event Styling": "images/EventStyling.jpg",
+  "Hosting Services": "images/Hosting.jpg",
+  "Photo & Video Coverage": "images/Coverage.jpg",
+  "Event Venue Rental": "images/Venue.jpg",
+};                 /* optional cover photo per service card, key = the service name, e.g. IMG["Wedding"] = "images/wedding-cover.jpg" */
 const SHEETS = "images/sheets/";
 const S = f => SHEETS + f;
 
